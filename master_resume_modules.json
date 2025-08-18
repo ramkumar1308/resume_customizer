@@ -1,45 +1,97 @@
 {
   "header": {
-    "name": "Ramkumar",
-    "title": "Senior Site Reliability Engineer / Cloud Engineer",
-    "contacts": "Dallas, TX | ram@example.com | (123) 456-7890 | linkedin.com/in/ram"
+    "name": "RAMKUMAR MUNISAMY",
+    "title": "Lead Cloud Site Reliability Engineer | Cloud Engineer",
+    "contacts": "Dallas, TX | +1-945-239-4059 | ramkumar_13@icloud.com | H4 EAD"
   },
   "summary": [
-    "14+ years in Site Reliability Engineering and Cloud Operations across banking and fintech.",
-    "Expert in Python automation, observability, Kubernetes, and system design.",
-    "Proven leadership in managing global SRE teams and delivering zero-downtime migrations."
+    "Cloud & Site Reliability Engineer with 14+ years in large-scale enterprise environments.",
+    "Blend leadership and hands-on skills in Python, Kubernetes, AWS/Azure/GCP.",
+    "Design fault-tolerant architectures, build observability frameworks, reduce MTTR, and automate toil."
   ],
   "skills_groups": [
-    ["Programming", ["Python", "Shell", "SQL"]],
-    ["Cloud", ["AWS", "Azure", "GCP"]],
-    ["Automation", ["Terraform", "Ansible", "Jenkins", "CI/CD"]],
-    ["Observability", ["Splunk", "AppDynamics", "Prometheus", "Grafana"]],
-    ["System Design", ["High Availability", "Disaster Recovery", "Capacity Planning"]]
+    ["Leadership", ["SRE Strategy", "Incident Management", "SLIs/SLOs", "Root Cause Analysis", "Postmortems", "Mentoring & Coaching"]],
+    ["Programming & Automation", ["Python", "REST APIs", "Flask", "Shell", "SQL"]],
+    ["System Design", ["Distributed Architecture", "High Availability", "Disaster Recovery", "Capacity Planning", "Microservices Design"]],
+    ["Cloud Platforms", ["AWS", "Azure", "GCP"]],
+    ["IaC & Automation", ["Terraform", "Ansible", "Packer"]],
+    ["CI/CD", ["GitLab CI", "Jenkins", "Azure DevOps"]],
+    ["Observability", ["Splunk", "AppDynamics", "Prometheus", "Grafana", "Jaeger", "Loki", "ThousandEyes"]],
+    ["Containers & Orchestration", ["Docker", "Kubernetes (EKS, AKS, GKE)"]]
   ],
   "experience": [
     {
-      "company": "Wells Fargo",
-      "role": "Lead SRE",
-      "dates": "2020–Present",
+      "company": "Wells Fargo – Dallas, TX",
+      "role": "Vice President – Lead Cloud Site Reliability Engineer",
+      "dates": "May 2023 – Present",
       "bullets": [
-        {"text": "Led a global SRE team ensuring 99.99% availability for mission-critical apps.", "tags": ["leadership","systemdesign"]},
-        {"text": "Built Python self-service portal for logging NFR fields, improving logging quality by 60%.", "tags": ["python","nfr"]},
-        {"text": "Designed HA/DR architecture across AWS regions.", "tags": ["systemdesign","cloud"]},
-        {"text": "Automated CI/CD pipelines using Jenkins & Terraform reducing release time by 40%.", "tags": ["cicd","terraform"]},
-        {"text": "Drove observability stack modernization (Splunk → Prometheus + Grafana).", "tags": ["observability"]}
+        { "text": "Directed SRE strategy for Salesforce CRM cloud adoption and legacy decommissioning.", "tags": ["leadership", "salesforce", "strategy"] },
+        { "text": "Built Python-based automation frameworks to save 20+ hours/week in ops tasks.", "tags": ["python", "automation"] },
+        { "text": "Architected distributed active-active deployments with automated failover.", "tags": ["systemdesign", "ha", "dr"] },
+        { "text": "Implemented synthetic monitoring & distributed tracing (Jaeger), improving early detection by 35%.", "tags": ["observability", "monitoring", "tracing"] },
+        { "text": "Mentored 8 SREs & developers; embedded DevOps & observability-first practices.", "tags": ["leadership", "mentoring"] },
+        { "text": "Ensured designs met NFRs for performance, scalability, and fault tolerance.", "tags": ["systemdesign", "nfr"] },
+        { "text": "Defined SLIs/SLOs and improved incident response accuracy by 30%.", "tags": ["slos", "incident"] }
       ]
     },
     {
-      "company": "Morgan Stanley",
-      "role": "Senior SRE",
-      "dates": "2016–2020",
+      "company": "Morgan Stanley – Bangalore, India",
+      "role": "Senior Manager – Cloud SRE Lead",
+      "dates": "Aug 2020 – Jun 2022",
       "bullets": [
-        {"text": "Migrated 50+ apps from on-prem to AWS Kubernetes (EKS).", "tags": ["kubernetes","cloud"]},
-        {"text": "Developed Python scripts for incident triage reducing MTTR by 30%.", "tags": ["python","incident"]},
-        {"text": "Implemented SLO/SLI framework and automated dashboards.", "tags": ["slos","observability"]}
+        { "text": "Led global SRE enablement program; trained 20+ engineers (SRE Academy).", "tags": ["leadership", "mentoring"] },
+        { "text": "Designed high-availability architecture for AI/ML platforms across regions.", "tags": ["systemdesign", "ha"] },
+        { "text": "Developed Python/Flask risk analysis tool integrated with Gremlin.", "tags": ["python", "flask", "chaos"] },
+        { "text": "Built SLI/SLO dashboards to improve operational KPIs.", "tags": ["slos", "observability"] },
+        { "text": "Modernized CI/CD with Kubernetes automated deployments.", "tags": ["cicd", "kubernetes"] }
+      ]
+    },
+    {
+      "company": "Amadeus Labs – Bangalore, India",
+      "role": "Senior SRE",
+      "dates": "Jan 2017 – Jul 2020",
+      "bullets": [
+        { "text": "Managed hybrid cloud/on-prem operations with CI/CD integration.", "tags": ["cicd", "cloud"] },
+        { "text": "Built Python scripts for automated monitoring and proactive incident detection.", "tags": ["python", "monitoring", "incident"] },
+        { "text": "Applied capacity modeling to ensure readiness for peak loads.", "tags": ["capacity", "systemdesign"] }
+      ]
+    },
+    {
+      "company": "VirtusaPolaris – Bangalore, India",
+      "role": "DevOps Engineer",
+      "dates": "Mar 2016 – Jan 2017",
+      "bullets": [
+        { "text": "Automated deployments using Ansible and Shell.", "tags": ["ansible", "automation"] },
+        { "text": "Configured Jenkins pipelines and Splunk dashboards.", "tags": ["jenkins", "observability"] }
+      ]
+    },
+    {
+      "company": "Accenture – Bangalore, India",
+      "role": "Application Support Engineer",
+      "dates": "Aug 2011 – Mar 2016",
+      "bullets": [
+        { "text": "Developed Python log analysis tools to identify recurring issues.", "tags": ["python", "logs"] },
+        { "text": "Managed WebLogic clusters for high-traffic banking applications.", "tags": ["weblogic", "systemdesign"] }
       ]
     }
   ],
   "projects": [
-    {"text": "Self-service portal for NFR logging fields streamlining compliance.", "tags": ["python","nfr"]},
-    {"text": "Automated Salesfo
+    { "text": "Self-Service NFR Logging Portal – Python + Flask portal to run NFR checks for logging fields; improved log quality & compliance across services.", "tags": ["python", "flask", "logging", "nfr", "observability"] },
+    { "text": "Bulk Data Load Status Automation – Python + Salesforce API integration auto-notifies teams of load status.", "tags": ["python", "salesforce", "automation"] },
+    { "text": "Recurring Error Detection Engine – Splunk + Python logic to cut alert noise by ~40%.", "tags": ["python", "splunk", "observability"] },
+    { "text": "OCP Migration Architecture – Designed multi-DC deployment with DB failover & zero-downtime cutover.", "tags": ["systemdesign", "ha", "dr"] }
+  ],
+  "certs": [
+    "VmWare Tanzu TAS Fundamental (2024)",
+    "Azure Fundamentals AZ-900 (2022)",
+    "SRE: Measuring & Managing Reliability (2021)",
+    "Gremlin Chaos Engineering Professional (2021)",
+    "AWS Solutions Architect – Associate (2019)",
+    "ITIL V3 (2017)",
+    "Splunk Power User (2015)"
+  ],
+  "education": [
+    "B.Tech, Information Technology – Rajiv Gandhi College of Engineering & Technology, Pondicherry, India",
+    "High School Diploma – Petit Seminaire Higher Secondary School, Pondicherry, India"
+  ]
+}
