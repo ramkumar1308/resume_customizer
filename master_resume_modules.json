@@ -1,0 +1,32 @@
+{
+  "header": {
+    "name": "Ramkumar",
+    "title": "Senior SRE / Cloud Engineer",
+    "contacts": "Dallas, TX | ram@example.com | 123-456-7890"
+  },
+  "summary": [
+    "14+ years in SRE, cloud, automation.",
+    "Leadership + hands-on Python experience."
+  ],
+  "experience": [
+    {
+      "company": "Wells Fargo",
+      "role": "Lead SRE",
+      "dates": "2020-Present",
+      "bullets": [
+        {
+          "text": "Led SRE initiatives.",
+          "tags": [
+            "leadership"
+          ]
+        },
+        {
+          "text": "Built Python automation.",
+          "tags": [
+            "python"
+          ]
+        }
+      ]
+    }
+  ]
+}
