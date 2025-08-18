@@ -1,23 +1,24 @@
 {
   "header": {
-    "name": "RAMKUMAR MUNISAMY",
-    "title": "Lead Cloud Site Reliability Engineer | Cloud Engineer",
+    "name": "Ramkumar Munisamy",
+    "title": "Lead Cloud / Site Reliability Engineer",
     "contacts": "Dallas, TX | +1-945-239-4059 | ramkumar_13@icloud.com | H4 EAD"
   },
   "summary": [
-    "Cloud & Site Reliability Engineer with 14+ years in large-scale enterprise environments.",
-    "Blend leadership and hands-on skills in Python, Kubernetes, AWS/Azure/GCP.",
-    "Design fault-tolerant architectures, build observability frameworks, reduce MTTR, and automate toil."
+    "Senior Cloud & Site Reliability Engineer with 14+ years of experience across banking, fintech, and travel domains.",
+    "Blend of leadership and individual contribution: drive strategy, coach SRE teams, and also deliver hands-on automation in Python.",
+    "Skilled in Kubernetes, AWS/Azure/GCP, observability, system design, and reducing MTTR through automation.",
+    "Proven track record building self-service portals, improving reliability, and streamlining operations at enterprise scale."
   ],
   "skills_groups": [
-    ["Leadership", ["SRE Strategy", "Incident Management", "SLIs/SLOs", "Root Cause Analysis", "Postmortems", "Mentoring & Coaching"]],
-    ["Programming & Automation", ["Python", "REST APIs", "Flask", "Shell", "SQL"]],
-    ["System Design", ["Distributed Architecture", "High Availability", "Disaster Recovery", "Capacity Planning", "Microservices Design"]],
+    ["Programming & Automation", ["Python", "Flask", "REST APIs", "Shell", "SQL"]],
     ["Cloud Platforms", ["AWS", "Azure", "GCP"]],
     ["IaC & Automation", ["Terraform", "Ansible", "Packer"]],
-    ["CI/CD", ["GitLab CI", "Jenkins", "Azure DevOps"]],
+    ["CI/CD", ["Jenkins", "GitLab CI", "Azure DevOps"]],
     ["Observability", ["Splunk", "AppDynamics", "Prometheus", "Grafana", "Jaeger", "Loki", "ThousandEyes"]],
-    ["Containers & Orchestration", ["Docker", "Kubernetes (EKS, AKS, GKE)"]]
+    ["System Design", ["Distributed Systems", "High Availability", "Disaster Recovery", "Capacity Planning"]],
+    ["Containers & Orchestration", ["Docker", "Kubernetes (EKS, AKS, GKE)"]],
+    ["Leadership", ["SRE Strategy", "Incident Management", "SLIs/SLOs", "Postmortems", "Mentoring & Coaching"]]
   ],
   "experience": [
     {
@@ -25,13 +26,13 @@
       "role": "Vice President – Lead Cloud Site Reliability Engineer",
       "dates": "May 2023 – Present",
       "bullets": [
-        { "text": "Directed SRE strategy for Salesforce CRM cloud adoption and legacy decommissioning.", "tags": ["leadership", "salesforce", "strategy"] },
-        { "text": "Built Python-based automation frameworks to save 20+ hours/week in ops tasks.", "tags": ["python", "automation"] },
-        { "text": "Architected distributed active-active deployments with automated failover.", "tags": ["systemdesign", "ha", "dr"] },
-        { "text": "Implemented synthetic monitoring & distributed tracing (Jaeger), improving early detection by 35%.", "tags": ["observability", "monitoring", "tracing"] },
-        { "text": "Mentored 8 SREs & developers; embedded DevOps & observability-first practices.", "tags": ["leadership", "mentoring"] },
-        { "text": "Ensured designs met NFRs for performance, scalability, and fault tolerance.", "tags": ["systemdesign", "nfr"] },
-        { "text": "Defined SLIs/SLOs and improved incident response accuracy by 30%.", "tags": ["slos", "incident"] }
+        { "text": "Directed SRE strategy for Salesforce CRM cloud adoption and legacy decommissioning.", "tags": ["leadership","salesforce","strategy"] },
+        { "text": "Built Python-based automation frameworks, saving 20+ hours/week in operational toil.", "tags": ["python","automation"] },
+        { "text": "Architected distributed active-active deployments with automated failover.", "tags": ["systemdesign","ha","dr"] },
+        { "text": "Implemented synthetic monitoring and distributed tracing (Jaeger), improving detection by 35%.", "tags": ["observability","monitoring","tracing"] },
+        { "text": "Mentored 8 SREs and developers; embedded DevOps and observability-first practices.", "tags": ["leadership","mentoring"] },
+        { "text": "Defined SLIs/SLOs and improved incident response accuracy by 30%.", "tags": ["slos","incident"] },
+        { "text": "Ensured designs met NFRs for performance, scalability, and fault tolerance.", "tags": ["systemdesign","nfr"] }
       ]
     },
     {
@@ -39,11 +40,11 @@
       "role": "Senior Manager – Cloud SRE Lead",
       "dates": "Aug 2020 – Jun 2022",
       "bullets": [
-        { "text": "Led global SRE enablement program; trained 20+ engineers (SRE Academy).", "tags": ["leadership", "mentoring"] },
-        { "text": "Designed high-availability architecture for AI/ML platforms across regions.", "tags": ["systemdesign", "ha"] },
-        { "text": "Developed Python/Flask risk analysis tool integrated with Gremlin.", "tags": ["python", "flask", "chaos"] },
-        { "text": "Built SLI/SLO dashboards to improve operational KPIs.", "tags": ["slos", "observability"] },
-        { "text": "Modernized CI/CD with Kubernetes automated deployments.", "tags": ["cicd", "kubernetes"] }
+        { "text": "Led global SRE enablement program; trained 20+ engineers through 'SRE Academy'.", "tags": ["leadership","mentoring"] },
+        { "text": "Designed high-availability architecture for AI/ML platforms across regions.", "tags": ["systemdesign","ha"] },
+        { "text": "Developed Python/Flask risk analysis tool integrated with Gremlin for chaos testing.", "tags": ["python","flask","chaos"] },
+        { "text": "Built SLI/SLO dashboards, improving operational KPI tracking.", "tags": ["slos","observability"] },
+        { "text": "Modernized CI/CD pipelines with Kubernetes automated deployments.", "tags": ["cicd","kubernetes"] }
       ]
     },
     {
@@ -51,9 +52,9 @@
       "role": "Senior SRE",
       "dates": "Jan 2017 – Jul 2020",
       "bullets": [
-        { "text": "Managed hybrid cloud/on-prem operations with CI/CD integration.", "tags": ["cicd", "cloud"] },
-        { "text": "Built Python scripts for automated monitoring and proactive incident detection.", "tags": ["python", "monitoring", "incident"] },
-        { "text": "Applied capacity modeling to ensure readiness for peak loads.", "tags": ["capacity", "systemdesign"] }
+        { "text": "Managed hybrid cloud/on-prem operations and integrated CI/CD pipelines.", "tags": ["cicd","cloud"] },
+        { "text": "Built Python scripts for automated monitoring and proactive incident detection.", "tags": ["python","monitoring","incident"] },
+        { "text": "Applied capacity modeling to ensure readiness for peak loads in airline systems.", "tags": ["capacity","systemdesign"] }
       ]
     },
     {
@@ -61,8 +62,8 @@
       "role": "DevOps Engineer",
       "dates": "Mar 2016 – Jan 2017",
       "bullets": [
-        { "text": "Automated deployments using Ansible and Shell.", "tags": ["ansible", "automation"] },
-        { "text": "Configured Jenkins pipelines and Splunk dashboards.", "tags": ["jenkins", "observability"] }
+        { "text": "Automated deployments using Ansible and Shell scripts.", "tags": ["ansible","automation"] },
+        { "text": "Configured Jenkins pipelines and Splunk dashboards.", "tags": ["jenkins","observability"] }
       ]
     },
     {
@@ -70,16 +71,16 @@
       "role": "Application Support Engineer",
       "dates": "Aug 2011 – Mar 2016",
       "bullets": [
-        { "text": "Developed Python log analysis tools to identify recurring issues.", "tags": ["python", "logs"] },
-        { "text": "Managed WebLogic clusters for high-traffic banking applications.", "tags": ["weblogic", "systemdesign"] }
+        { "text": "Developed Python log analysis tools to identify recurring issues.", "tags": ["python","logs"] },
+        { "text": "Managed WebLogic clusters for high-traffic banking applications.", "tags": ["weblogic","systemdesign"] }
       ]
     }
   ],
   "projects": [
-    { "text": "Self-Service NFR Logging Portal – Python + Flask portal to run NFR checks for logging fields; improved log quality & compliance across services.", "tags": ["python", "flask", "logging", "nfr", "observability"] },
-    { "text": "Bulk Data Load Status Automation – Python + Salesforce API integration auto-notifies teams of load status.", "tags": ["python", "salesforce", "automation"] },
-    { "text": "Recurring Error Detection Engine – Splunk + Python logic to cut alert noise by ~40%.", "tags": ["python", "splunk", "observability"] },
-    { "text": "OCP Migration Architecture – Designed multi-DC deployment with DB failover & zero-downtime cutover.", "tags": ["systemdesign", "ha", "dr"] }
+    { "text": "Self-Service NFR Logging Portal – Built Python + Flask portal to validate NFR logging fields, improving log quality and compliance across services.", "tags": ["python","flask","logging","nfr","observability"] },
+    { "text": "Bulk Data Load Status Automation – Python + Salesforce API integration that auto-notifies teams of load status.", "tags": ["python","salesforce","automation"] },
+    { "text": "Recurring Error Detection Engine – Splunk + Python logic to reduce alert noise by ~40%.", "tags": ["python","splunk","observability"] },
+    { "text": "OCP Migration Architecture – Designed multi-DC deployment with DB failover & zero-downtime cutover.", "tags": ["systemdesign","ha","dr"] }
   ],
   "certs": [
     "VmWare Tanzu TAS Fundamental (2024)",
