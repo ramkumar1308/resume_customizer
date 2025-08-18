@@ -1,32 +1,45 @@
 {
   "header": {
     "name": "Ramkumar",
-    "title": "Senior SRE / Cloud Engineer",
-    "contacts": "Dallas, TX | ram@example.com | 123-456-7890"
+    "title": "Senior Site Reliability Engineer / Cloud Engineer",
+    "contacts": "Dallas, TX | ram@example.com | (123) 456-7890 | linkedin.com/in/ram"
   },
   "summary": [
-    "14+ years in SRE, cloud, automation.",
-    "Leadership + hands-on Python experience."
+    "14+ years in Site Reliability Engineering and Cloud Operations across banking and fintech.",
+    "Expert in Python automation, observability, Kubernetes, and system design.",
+    "Proven leadership in managing global SRE teams and delivering zero-downtime migrations."
+  ],
+  "skills_groups": [
+    ["Programming", ["Python", "Shell", "SQL"]],
+    ["Cloud", ["AWS", "Azure", "GCP"]],
+    ["Automation", ["Terraform", "Ansible", "Jenkins", "CI/CD"]],
+    ["Observability", ["Splunk", "AppDynamics", "Prometheus", "Grafana"]],
+    ["System Design", ["High Availability", "Disaster Recovery", "Capacity Planning"]]
   ],
   "experience": [
     {
       "company": "Wells Fargo",
       "role": "Lead SRE",
-      "dates": "2020-Present",
+      "dates": "2020–Present",
       "bullets": [
-        {
-          "text": "Led SRE initiatives.",
-          "tags": [
-            "leadership"
-          ]
-        },
-        {
-          "text": "Built Python automation.",
-          "tags": [
-            "python"
-          ]
-        }
+        {"text": "Led a global SRE team ensuring 99.99% availability for mission-critical apps.", "tags": ["leadership","systemdesign"]},
+        {"text": "Built Python self-service portal for logging NFR fields, improving logging quality by 60%.", "tags": ["python","nfr"]},
+        {"text": "Designed HA/DR architecture across AWS regions.", "tags": ["systemdesign","cloud"]},
+        {"text": "Automated CI/CD pipelines using Jenkins & Terraform reducing release time by 40%.", "tags": ["cicd","terraform"]},
+        {"text": "Drove observability stack modernization (Splunk → Prometheus + Grafana).", "tags": ["observability"]}
+      ]
+    },
+    {
+      "company": "Morgan Stanley",
+      "role": "Senior SRE",
+      "dates": "2016–2020",
+      "bullets": [
+        {"text": "Migrated 50+ apps from on-prem to AWS Kubernetes (EKS).", "tags": ["kubernetes","cloud"]},
+        {"text": "Developed Python scripts for incident triage reducing MTTR by 30%.", "tags": ["python","incident"]},
+        {"text": "Implemented SLO/SLI framework and automated dashboards.", "tags": ["slos","observability"]}
       ]
     }
-  ]
-}
+  ],
+  "projects": [
+    {"text": "Self-service portal for NFR logging fields streamlining compliance.", "tags": ["python","nfr"]},
+    {"text": "Automated Salesfo
