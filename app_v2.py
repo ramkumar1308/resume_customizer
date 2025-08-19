@@ -1,16 +1,15 @@
 
 import io, json, zipfile
 import streamlit as st
-from parser_v2 import extract_text_from_docx, extract_text_from_pdf, parse_resume_to_json
-from builder_v2 import build_resume_docx, build_cover_letter_docx
+from parser_v2_1 import extract_text_from_docx, extract_text_from_pdf, parse_resume_to_json
+from builder_v2_1 import build_resume_docx, build_cover_letter_docx
 
-st.set_page_config(page_title="SRE Resume Customizer – Clean UI", page_icon="🧰", layout="centered")
-st.title("SRE Resume Customizer – Clean UI")
-st.caption("Upload your resume (PDF/DOCX) → paste JD → get tailored resume + cover letter. JSON stays under the hood.")
+st.set_page_config(page_title="SRE Resume Customizer – v2.1", page_icon="🧰", layout="centered")
+st.title("SRE Resume Customizer – v2.1")
+st.caption("Upload resume → paste JD → get a clean, formatted resume + cover letter. JSON stays under the hood.")
 
-# Upload resume
 st.subheader("1) Upload your resume")
-file = st.file_uploader("Upload resume (PDF or DOCX)", type=["pdf","docx"])
+file = st.file_uploader("Upload PDF or DOCX", type=["pdf","docx"])
 
 resume_text = ""
 if file is not None:
@@ -20,36 +19,28 @@ if file is not None:
         else:
             resume_text = extract_text_from_pdf(file)
         if not resume_text or len(resume_text.split()) < 20:
-            st.warning("Text extraction looks thin. If possible, upload the DOCX version for best results.")
+            st.warning("Extraction looks thin. If possible, upload the DOCX version for best results.")
         else:
             st.success("Resume text extracted.")
     except Exception as e:
         st.error(f"Failed to read resume: {e}")
 
-# Hidden JSON
 lib = None
 if resume_text:
     try:
         lib = parse_resume_to_json(resume_text)
-        st.caption("Parsed resume into structured data ✔")
+        if not lib.get("experience"):
+            st.warning("Could not confidently detect your experience section. Try DOCX upload for better accuracy.")
+        else:
+            st.caption(f"Detected {len(lib['experience'])} experience block(s).")
     except Exception as e:
-        st.error(f"Failed to parse resume into structured data: {e}")
+        st.error(f"Failed to parse resume: {e}")
 
-# Optional download of parsed JSON (off by default)
-with st.expander("Optional: Download parsed JSON (advanced)", expanded=False):
-    if lib:
-        st.download_button("Download JSON", data=json.dumps(lib, indent=2).encode("utf-8"),
-                           file_name="master_resume_modules.json", mime="application/json")
-    else:
-        st.caption("Upload a resume first.")
-
-# Job Description
 st.subheader("2) Paste the Job Description")
 jd_text = st.text_area("Paste JD here", height=220, placeholder="Paste the full JD")
-company = st.text_input("Company", placeholder="e.g., Experian")
-role = st.text_input("Role", placeholder="e.g., Senior Site Reliability Engineer (Remote)")
+company = st.text_input("Company", placeholder="e.g., Saviynt")
+role = st.text_input("Role", placeholder="e.g., Principal SRE (Remote)")
 
-# Generate
 st.subheader("3) Generate your apply pack")
 if st.button("Generate Apply Pack (.zip)"):
     if not lib:

@@ -3,7 +3,6 @@ import io, re
 from typing import Dict, List, Set
 from docx import Document
 from docx.shared import Pt, Inches
-from docx.oxml.ns import qn
 from docx.enum.text import WD_LINE_SPACING
 
 KEYWORD_TO_TAG = {
@@ -45,10 +44,10 @@ def rank_bullets(bullets: List[Dict], wanted: Set[str], k: int) -> List[str]:
         out = [b.get("text","") for b in bullets[:k]]
     return out
 
-def set_paragraph_style(p, size=10.5, space_after=0.6):
-    p_format = p.paragraph_format
-    p_format.space_after = Pt(space_after)
-    p_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
+def style_paragraph(p, size=10.5, after=1):
+    fmt = p.paragraph_format
+    fmt.space_after = Pt(after)
+    fmt.line_spacing_rule = WD_LINE_SPACING.SINGLE
     for r in p.runs:
         r.font.size = Pt(size)
         r.font.name = "Calibri"
@@ -57,8 +56,7 @@ def add_heading(doc, text, size=12, top=12, bottom=6):
     p = doc.add_paragraph()
     r = p.add_run(text)
     r.bold = True
-    r.font.size = Pt(size)
-    r.font.name = "Calibri"
+    r.font.size = Pt(size); r.font.name = "Calibri"
     p.paragraph_format.space_before = Pt(top)
     p.paragraph_format.space_after = Pt(bottom)
 
@@ -66,8 +64,7 @@ def add_bullets(doc, items, size=10.5):
     for t in items:
         p = doc.add_paragraph(style=None)
         run = p.add_run("• " + t)
-        run.font.size = Pt(size)
-        run.font.name = "Calibri"
+        run.font.size = Pt(size); run.font.name = "Calibri"
         p.paragraph_format.space_after = Pt(1)
 
 def build_resume_docx(lib: Dict, company: str, role: str, jd_text: str) -> io.BytesIO:
@@ -85,12 +82,13 @@ def build_resume_docx(lib: Dict, company: str, role: str, jd_text: str) -> io.By
 
     hdr = lib.get("header", {})
     add_heading(doc, hdr.get("name","YOUR NAME"), size=16, top=0, bottom=2)
-    p = doc.add_paragraph(hdr.get("title","")); set_paragraph_style(p, size=11, space_after=1)
-    p = doc.add_paragraph(hdr.get("contacts","")); set_paragraph_style(p, size=10, space_after=2)
+    p = doc.add_paragraph(hdr.get("title","")); style_paragraph(p, size=11, after=1)
+    p = doc.add_paragraph(hdr.get("contacts","")); style_paragraph(p, size=10, after=2)
 
-    add_heading(doc, "PROFESSIONAL SUMMARY", size=12, top=10, bottom=4)
-    for line in lib.get("summary", []):
-        p = doc.add_paragraph(line); set_paragraph_style(p, size=10.5, space_after=1)
+    if lib.get("summary"):
+        add_heading(doc, "PROFESSIONAL SUMMARY", size=12, top=10, bottom=4)
+        for line in lib.get("summary", []):
+            p = doc.add_paragraph(line); style_paragraph(p, size=10.5, after=1)
 
     if lib.get("skills_groups"):
         add_heading(doc, "CORE SKILLS", size=12, top=10, bottom=4)
@@ -98,22 +96,23 @@ def build_resume_docx(lib: Dict, company: str, role: str, jd_text: str) -> io.By
             p = doc.add_paragraph()
             r = p.add_run(f"{title}: "); r.bold = True; r.font.size = Pt(10.5); r.font.name = "Calibri"
             r2 = p.add_run(", ".join(items)); r2.font.size = Pt(10.5); r2.font.name = "Calibri"
-            set_paragraph_style(p, size=10.5, space_after=0.5)
+            style_paragraph(p, size=10.5, after=0.5)
 
-    add_heading(doc, "PROFESSIONAL EXPERIENCE", size=12, top=10, bottom=4)
-    for ex in exp_recent:
-        add_heading(doc, f"{ex.get('company','')} | {ex.get('role','')} ({ex.get('dates','')})", size=11, top=8, bottom=2)
-        add_bullets(doc, rank_bullets(ex.get("bullets", []), wanted, 6), size=10.5)
+    if exp:
+        add_heading(doc, "PROFESSIONAL EXPERIENCE", size=12, top=10, bottom=4)
+        for ex in exp_recent:
+            add_heading(doc, f"{ex.get('company','')} | {ex.get('role','')} ({ex.get('dates','')})", size=11, top=8, bottom=2)
+            add_bullets(doc, rank_bullets(ex.get("bullets", []), wanted, 6), size=10.5)
 
-    doc.add_page_break()
+        if exp_earlier:
+            doc.add_page_break()
 
-    for ex in exp_earlier:
-        add_heading(doc, f"{ex.get('company','')} | {ex.get('role','')} ({ex.get('dates','')})", size=11, top=8, bottom=2)
-        add_bullets(doc, rank_bullets(ex.get("bullets", []), wanted, 4), size=10.5)
+        for ex in exp_earlier:
+            add_heading(doc, f"{ex.get('company','')} | {ex.get('role','')} ({ex.get('dates','')})", size=11, top=8, bottom=2)
+            add_bullets(doc, rank_bullets(ex.get("bullets", []), wanted, 4), size=10.5)
 
     if lib.get("projects"):
         add_heading(doc, "KEY PROJECTS", size=12, top=10, bottom=3)
-        # pick top 4 by match
         ranked = sorted(lib["projects"], key=lambda p: len(set(p.get("tags", [])) & wanted), reverse=True)
         add_bullets(doc, [p["text"] for p in ranked[:4]], size=10.5)
 
