@@ -1,8 +1,8 @@
 
 import io, json, zipfile
 import streamlit as st
-from parser_v2_1 import extract_text_from_docx, extract_text_from_pdf, parse_resume_to_json
-from builder_v2_1 import build_resume_docx, build_cover_letter_docx
+from parser_v2 import extract_text_from_docx, extract_text_from_pdf, parse_resume_to_json
+from builder_v2 import build_resume_docx, build_cover_letter_docx
 
 st.set_page_config(page_title="SRE Resume Customizer – v2.1", page_icon="🧰", layout="centered")
 st.title("SRE Resume Customizer – v2.1")
